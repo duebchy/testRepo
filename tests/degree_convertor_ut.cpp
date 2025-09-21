@@ -20,3 +20,16 @@ TEST(FarenheitToCelsiusSuite, DoubleTest){
     double result = FarenheitToCelsius(23.0);
     EXPECT_EQ(result, -5);
 }
+
+TEST(GetModeSuite, cTOfTest){
+    EMode result = GetMode("c2f");
+    EXPECT_EQ(result, kC2F);
+}
+TEST(GetModeSuite, fTOcTest){
+    EMode result = GetMode("f2c");
+    EXPECT_EQ(result, fF2C);
+}
+TEST(GetModeSuite, unsupporTest){
+    EMode result = GetMode("c2c");
+    EXPECT_EQ(result, kUnsupported);
+}
